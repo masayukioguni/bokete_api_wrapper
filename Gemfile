@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'jruby-openssl', :platforms => :jruby
 gem 'rake'
 gem 'yard'
+gem 'rest-client'
 
 group :development do
   gem 'kramdown'
