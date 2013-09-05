@@ -7,7 +7,9 @@ describe BoketeApiWrapper::Api::Base do
         provider("popular")
       end
     end
-    subject { api_class.new("popular") }
-    its(:provider) { should == mock_user }
+    subject { api_class.new }
+    #its(:client) { 
+    #	should == :client 
+    #}
   end
 end
