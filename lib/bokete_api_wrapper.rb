@@ -1,5 +1,7 @@
 require "bokete_api_wrapper/version"
 require "bokete_api_wrapper/configuration"
+require "bokete_api_wrapper/clients"
+
 
 module BoketeApiWrapper
     def self.configuration
