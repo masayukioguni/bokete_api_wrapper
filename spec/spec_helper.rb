@@ -2,7 +2,6 @@ $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'rspec'
 require 'bokete_api_wrapper'
-
 require 'factory_girl'
 require 'webmock/rspec'
 
@@ -16,10 +15,10 @@ RSpec.configure do |config|
 
   FactoryGirl.find_definitions
 
-  Niconico.setup do |conf|
-    conf.site_id = :site
-    conf.salt = :salt
+  BoketeApiWrapper.setup do |conf|
     conf.dev = true
+    conf.endpoint = 'https://api.instagram.com/v1/'.freeze
+    conf.user_agent =  "BoketeApiWrapper Ruby Gem #{BoketeApiWrapper::VERSION}".freeze
   end
 
   def mock_file(file)
