@@ -17,7 +17,8 @@ RSpec.configure do |config|
 
   BoketeApiWrapper.setup do |conf|
     conf.dev = true
-    conf.endpoint = 'https://api.instagram.com/v1/'.freeze
+    conf.host  = 'bokete.jp'.freeze
+    conf.endpoint = 'boke'.freeze
     conf.user_agent =  "BoketeApiWrapper Ruby Gem #{BoketeApiWrapper::VERSION}".freeze
   end
 

@@ -4,8 +4,9 @@ module BoketeApiWrapper
   module Clients
     class BoketeApi
       def initialize
-        @host = BoketeApiWrapper.configuration.endpoint
         @scheme = 'http'
+        @host = BoketeApiWrapper.configuration.host
+        @endpoint = BoketeApiWrapper.configuration.endpoint
         @ua = BoketeApiWrapper.configuration.user_agent
       end
 
@@ -19,7 +20,7 @@ module BoketeApiWrapper
 
       private
       def build_url(path)
-        URI.join("#{@scheme}://#{@host}", path).to_s
+        URI.join("#{@scheme}://#{@host}/#{@endpoint}/", path).to_s
       end
     end
   end
