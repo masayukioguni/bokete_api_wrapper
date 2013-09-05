@@ -1,24 +1,21 @@
 source 'https://rubygems.org'
 
 # Specify your gem's dependencies in bokete_api_wrapper.gemspec
+gemspec
 
-gem 'jruby-openssl', :platforms => :jruby
-gem 'rake'
-gem 'yard'
-gem 'rest-client'
-
-group :development do
-  gem 'kramdown'
+group :development, :test do
+  gem 'guard'
+  gem 'rspec'
+  gem 'guard-rspec'
   gem 'pry'
+  gem 'pry-doc'
+
+  gem 'libnotify', :require => false
+  gem 'growl', :require => false
+
+  gem 'factory_girl'
 end
 
 group :test do
-  gem 'coveralls', :require => false
-  gem 'guard-rspec'
-  gem 'json', '~> 1.7', :platforms => [:ruby_18, :jruby]
-  gem 'rspec', '>= 2.11'
-  gem 'simplecov', :require => false
   gem 'webmock'
-  gem 'test-queue'
 end
-gemspec
