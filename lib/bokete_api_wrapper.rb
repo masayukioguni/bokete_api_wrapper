@@ -11,4 +11,9 @@ module BoketeApiWrapper
   def self.setup
     yield configuration if block_given?
   end
+
+  def self.popular(options = {})
+  	p "popular"
+  end 
+
 end
