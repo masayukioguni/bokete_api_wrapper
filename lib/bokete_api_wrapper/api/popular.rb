@@ -5,7 +5,7 @@ module BoketeApiWrapper
 
       class ApiError < StandardError ; end
 
-      def get(page = 0,options = {})
+      def get(page = 1,options = {})
         params = {
           :page => page
         }
