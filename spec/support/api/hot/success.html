@@ -1,0 +1,1424 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja" xmlns:fb="http://ogp.me/ns/fb#">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="Slurp" content="NOYDIR" />
+  <meta name="robots" content="noodp" />
+
+  <title>
+    注目ボケ一覧 : ボケて（bokete）
+  </title>
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link type="text/css" rel="stylesheet" href="/common/css/import.css?00005" />
+  <link type="text/css" rel="stylesheet" href="/css/rating/jquery.rating.css" />
+  <link type="text/css" rel="stylesheet" href="/css/ui-lightness/jquery-ui-1.7.1.custom.css?00001" />
+  <link type="text/css" rel="stylesheet" href="/css/bokete.css?00017" />
+  <script type="text/javascript" src="/js/jqueries.js?00006"></script>
+  <script type="text/javascript" src="/js/bokete.js?00024"></script>
+  <script type="text/javascript" src="http://sh.adingo.jp/?G=1000007628&guid=ON"></script>
+ </head>
+ <body>
+
+   <div id="pagetop" class="wrap">
+     <div id="header" class="fix">
+       <h1>
+         <a href="/">ボケて（bokete）</a>
+       </h1>
+
+       <div class="h_bn">
+         <!-- Fluct ユニット名「bokete：468×60（GA）」 -->
+<script type="text/javascript">
+//<![CDATA[
+if(typeof(adingoFluct)!="undefined") adingoFluct.showAd('1000006999');
+//]]>
+</script>
+
+       </div>
+
+       <div class="h_inbox">
+
+         <div class="search">
+           <form action="/search" method="get">
+             <input type="button" class="bt_search" value="" />
+             <input name="q" type="text" class="search_bar" />  
+             <input type="hidden" name="cx" value="003072381194260859782:55xqbenybpo" />
+             <input type="hidden" name="cof" value="FORID:10" />
+             <input type="hidden" name="ie" value="UTF-8" />
+           </form>
+         </div>
+
+         <ul>
+           <li><a href="/register">新規登録</a></li>
+           <li>｜<a href="/about/whats">ボケてって？</a></li>
+           <li>｜<a href="/login">ログイン</a></li>
+         </ul>
+       </div>
+       <!-- END site/header -->
+
+     </div>
+
+     <!-- BEGIN gnavi -->
+     <div id="gnavi" class="fix ui-corner-all">
+       <!-- BEGIN tab -->
+       <ul>
+  <li><a href="/boke"><img src="/common/images/navi01.gif" alt="ボケ" width="71" height="23" /></a></li>
+  <li><a href="/odai"><img src="/common/images/navi02.gif" alt="お題" width="71" height="23" /></a></li>
+  <li><a href="/user_ranking/boke"><img src="/common/images/navi03.gif" alt="職人" width="69" height="23" /></a></li>
+</ul>
+
+       <!-- END tab -->
+
+       <!-- BEGIN subnavi -->
+       <div id="subnavi" class="boke">
+  <div class="subnavi-content">
+    <ul>
+      <li><a href="/boke">総合</a></li>
+      <li >｜&nbsp;&nbsp;<a href="/boke/category/%E3%83%90%E3%82%AB">バカ</a></li>
+      <li >｜&nbsp;&nbsp;<a href="/boke/category/%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%AB">シュール</a></li>
+      <li >｜&nbsp;&nbsp;<a href="/boke/category/%E3%81%8A%E4%B8%8B%E5%8A%A3">お下劣</a></li>
+      <li >｜&nbsp;&nbsp;<a href="/boke/category/%E3%83%96%E3%83%A9%E3%83%83%E3%82%AF">ブラック</a></li>
+      <li >｜&nbsp;&nbsp;<a href="/boke/category/%E8%BA%AB%E5%86%85">身内</a></li>
+      <li >｜&nbsp;&nbsp;<a href="/boke/category/%E4%BE%8B%E3%81%88">例え</a></li>
+      <li >｜&nbsp;&nbsp;<a href="/boke/category/%E3%81%9D%E3%81%AE%E4%BB%96">その他</a></li>
+      <li >｜&nbsp;&nbsp;<a href="/boke/flickr">Flickr</a></li>
+    </ul>
+  </div>
+  
+</div>
+
+       <!-- END subnavi -->
+       <p>
+         ボケ投稿数<em>11,092,854</em>件
+         お題投稿数<em>469,093</em>件
+       </p>
+     </div>
+     <!-- END gnavi -->
+
+     <div id="news_area">
+       
+<div class="ttl_boke news-area-content">
+  <em class="sort-type-button ui-corner-all ui-state-default" style="border-color:#ff9999;">
+    <a href="/odai">ボケる</a>
+  </em>
+
+  <em id="sort-type-button-recent" class="sort-type-button ui-corner-all ui-state-default"><a href="/boke/recent">新着</a></em>
+  <em id="sort-type-button-hot" class="sort-type-button ui-corner-all ui-state-active"><a href="/boke/hot">注目</a></em>
+  <em id="sort-type-button-popular" class="sort-type-button ui-corner-all ui-state-default"><a href="/boke/popular">人気</a></em>
+  <em id="sort-type-button-daily" class="sort-type-button ui-corner-all ui-state-default"><a href="/boke/daily">日付別ボケランキング</a></em>
+
+  <div class="ui-widget other-boke-panel news-area-content">
+    <em class="ui-corner-all ui-state-default"><a href="/safe_mode">セーフモード&nbsp;&nbsp;オン</a></em>
+    <em><a href="/about/whats#whats06-06">？</a></em>
+  </div>
+</div>
+
+     </div>
+
+     <div id="main_base" class="fix">
+
+       <div class="main_container">
+         
+<h2>注目ボケ一覧</h2>
+
+<!-- BEGIN boke-entry -->
+<div class="boke-entry attention ui-widget" id="boke-entry-11141771">
+
+
+
+<!-- BEGIN scroll buttons -->
+<div class="ui-helper-clearfix" style="width:500px;padding-top:10px;">
+  <a href="javascript:scrollBoke(11141771);">
+    <span class="ui-state-default ui-corner-all icon" style="float:right;margin-right:5px;cursor:pointer;">
+      <span class="ui-icon ui-icon-arrowthickstop-1-s" style="margin:4px;">&nbsp;</span>
+    </span>
+  </a>
+  <a href="javascript:scrollToTop();">
+    <span class="ui-state-default ui-corner-all icon" style="float:right;margin-right:5px;cursor: pointer;">
+      <span class="ui-icon ui-icon-arrowthick-1-n" style="margin:4px;">&nbsp;</span>
+    </span>
+  </a>
+</div>
+<!-- END scroll buttons -->
+
+<br />
+<!-- BEGIN photo odai info -->
+<div class="photo">
+  <a href="/odai/469179">
+    <img src="//d2dcan0armyq93.cloudfront.net/photo/odai/400/e0e6f82aa21cf2a9df4878cdd87b257e_400.jpg" alt="" style="width:400;height:279;" />
+  </a>
+  <p>
+  お題 by <a href="/user/sevenfouls">seven</a>
+  photo by
+    <a href="/user/sevenfouls">
+      seven
+    </a>
+
+  </p>
+</div>
+<!-- END photo odai info -->
+
+<p class="boke_read">鼻に仕込んだピーナッツが絶望的な場所まで入りこんだ</p>
+
+
+<p class="boke-entry-info">
+  【<a href="/boke/category/%E3%83%90%E3%82%AB">バカ</a>】
+  <a href="/boke/11141771">5時間くらい前</a>
+
+
+</p>
+
+
+<div class="boke-entry-rating">
+
+      <form id="rating-form-11141771" class="rating-form" action="/rating" method="post" style="text-align:center;display:inline-block;">
+        <div style="width:80px;margin:5px auto;">
+          <input type="radio" value="1" name="rate-11141771" class="boke-star ui-helper-hidden" title="面白い！"  />
+          <input type="radio" value="2" name="rate-11141771" class="boke-star ui-helper-hidden" title="すごく面白い！！"  />
+          <input type="radio" value="3" name="rate-11141771" class="boke-star ui-helper-hidden" title="ちょーーー面白い！！！"  />
+          <div sytle="clear:both;"></div>
+        </div>
+        <input class="boke-rate" type="hidden" name="rate" />
+        <input class="boke-id" type="hidden" name="boke_id" value="11141771" />
+        <input class="boke-reload" type="hidden" name="reload" value="0" />
+      </form>
+      <p class="rating-message" style="margin:4px;width:100%;display:block;">&nbsp;</p>
+<div class="comment-panel" style="line-height:180%;">
+</div>
+
+<!-- BEGIN accordion -->
+<div class="accordion boke-entry-rating-info">
+<span id="accordion-header-11141771" class="accordion-header">
+  <a href="/boke/11141771#boke-permalink-rating">
+  ★
+  の合計&nbsp;<em>1324</em>（595）</a>
+  <a class="rating-link ui-helper-hidden" href="/boke/11141771/rating?type=big">&nbsp;</a>
+</span>
+</div>
+<!-- END accordion -->
+</div>
+
+
+<center style="margin-bottom:20px;">
+  <!--      Fluct ユニット名「ボケて：336×280（GA）」     -->
+<script type="text/javascript">
+//<![CDATA[
+if(typeof(adingoFluct)!="undefined") adingoFluct.showAd('1000007444');
+//]]>
+</script>
+
+</center>
+
+<div class="boke-social-bottom">
+<a href="http://twitter.com/share" class="socialite twitter-share" data-lang="ja" data-text="鼻に仕込んだピーナッツが絶望的な場所まで入りこんだ #ボケて" data-url="http://bokete.jp/boke/11141771" data-count="horizontal" rel="nofollow" target="_blank"></a>&nbsp;
+<a href="http://www.facebook.com/sharer.php?u=http://bokete.jp/boke/11141771" class="socialite facebook-like" data-href="http://bokete.jp/boke/11141771" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" rel="nofollow"></a>
+</div>
+<div style="clear:both;"></div>
+
+<div style="font-size:12px;">
+  Blogで紹介する&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input value="&lt;a href=&quot;http://bokete.jp/boke/11141771&quot;&gt;&lt;img src=&quot;http://ss.bokete.jp/11141771.jpg&quot; title=&quot;鼻に仕込んだピーナッツが絶望的な場所まで入りこんだ&quot;&gt;&lt;/a&gt;" style="width:380px;" onclick="this.select(0,this.value.length)"/>
+</div>
+<div style="font-size:12px;margin-top:10px;">
+  ダウンロード用画像URL&nbsp;
+  <input value="http://ss.bokete.jp/11141771.jpg" style="width:200px;" onclick="this.select(0,this.value.length)"/>
+</div>
+</div>
+<!-- END boke-entry -->
+
+<!-- BEGIN boke-entry -->
+<div class="boke-entry attention ui-widget" id="boke-entry-11141129">
+
+
+
+<!-- BEGIN scroll buttons -->
+<div class="ui-helper-clearfix" style="width:500px;padding-top:10px;">
+  <a href="javascript:scrollBoke(11141129);">
+    <span class="ui-state-default ui-corner-all icon" style="float:right;margin-right:5px;cursor:pointer;">
+      <span class="ui-icon ui-icon-arrowthickstop-1-s" style="margin:4px;">&nbsp;</span>
+    </span>
+  </a>
+  <a href="javascript:scrollToTop();">
+    <span class="ui-state-default ui-corner-all icon" style="float:right;margin-right:5px;cursor: pointer;">
+      <span class="ui-icon ui-icon-arrowthick-1-n" style="margin:4px;">&nbsp;</span>
+    </span>
+  </a>
+</div>
+<!-- END scroll buttons -->
+
+<br />
+<!-- BEGIN photo odai info -->
+<div class="photo">
+  <a href="/odai/469087">
+    <img src="//d2dcan0armyq93.cloudfront.net/photo/odai/400/a212bc3753c21608bc617ca10bb9cd50_400.jpg" alt="" style="width:400;height:400;" />
+  </a>
+  <p>
+  お題 by <a href="/user/31725">アマチュア無線</a>
+  photo by
+    <a href="/user/31725">
+      アマチュア無線
+    </a>
+
+  </p>
+</div>
+<!-- END photo odai info -->
+
+<p class="boke_read">空を自由に～飛～びた～いな～♪見たまえ！飛行石！(ﾁｬﾘｰﾝ！ｳｫﾝｳｫﾝｳｫﾝｳｫﾝ)ハッハッハ！ハッハッハッハ！</p>
+
+
+<p class="boke-entry-info">
+  【<a href="/boke/category/%E3%83%90%E3%82%AB">バカ</a>】
+  <a href="/boke/11141129">6時間くらい前</a>
+
+
+</p>
+
+<p>
+タグ:
+[<a href="/boke/tag/%E3%83%A0%E3%82%B9%E3%82%AB%E3%81%A7%E3%83%9C%E3%82%B1%E3%82%8B%E3%81%AE%E3%82%81%E3%81%A3%E3%81%A1%E3%82%83%E6%A5%BD%E3%81%97%E3%81%84%E3%81%A7%E3%81%99">ムスカでボケるのめっちゃ楽しいです</a>]&nbsp;
+</p>
+
+<div class="boke-entry-rating">
+
+      <form id="rating-form-11141129" class="rating-form" action="/rating" method="post" style="text-align:center;display:inline-block;">
+        <div style="width:80px;margin:5px auto;">
+          <input type="radio" value="1" name="rate-11141129" class="boke-star ui-helper-hidden" title="面白い！"  />
+          <input type="radio" value="2" name="rate-11141129" class="boke-star ui-helper-hidden" title="すごく面白い！！"  />
+          <input type="radio" value="3" name="rate-11141129" class="boke-star ui-helper-hidden" title="ちょーーー面白い！！！"  />
+          <div sytle="clear:both;"></div>
+        </div>
+        <input class="boke-rate" type="hidden" name="rate" />
+        <input class="boke-id" type="hidden" name="boke_id" value="11141129" />
+        <input class="boke-reload" type="hidden" name="reload" value="0" />
+      </form>
+      <p class="rating-message" style="margin:4px;width:100%;display:block;">&nbsp;</p>
+<div class="comment-panel" style="line-height:180%;">
+</div>
+
+<!-- BEGIN accordion -->
+<div class="accordion boke-entry-rating-info">
+<span id="accordion-header-11141129" class="accordion-header">
+  <a href="/boke/11141129#boke-permalink-rating">
+  ★
+  の合計&nbsp;<em>928</em>（398）</a>
+  <a class="rating-link ui-helper-hidden" href="/boke/11141129/rating?type=big">&nbsp;</a>
+</span>
+</div>
+<!-- END accordion -->
+</div>
+
+
+
+<div class="boke-social-bottom">
+<a href="http://twitter.com/share" class="socialite twitter-share" data-lang="ja" data-text="空を自由に～飛～びた～いな～♪見たまえ！飛行石！(ﾁｬﾘｰﾝ！ｳｫﾝｳｫﾝｳｫﾝｳｫﾝ)ハッハッハ！ハッハッハッハ！ #ボケて" data-url="http://bokete.jp/boke/11141129" data-count="horizontal" rel="nofollow" target="_blank"></a>&nbsp;
+<a href="http://www.facebook.com/sharer.php?u=http://bokete.jp/boke/11141129" class="socialite facebook-like" data-href="http://bokete.jp/boke/11141129" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" rel="nofollow"></a>
+</div>
+<div style="clear:both;"></div>
+
+<div style="font-size:12px;">
+  Blogで紹介する&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input value="&lt;a href=&quot;http://bokete.jp/boke/11141129&quot;&gt;&lt;img src=&quot;http://ss.bokete.jp/11141129.jpg&quot; title=&quot;空を自由に～飛～びた～いな～♪見たまえ！飛行石！(ﾁｬﾘｰﾝ！ｳｫﾝｳｫﾝｳｫﾝｳｫﾝ)ハッハッハ！ハッハッハッハ！&quot;&gt;&lt;/a&gt;" style="width:380px;" onclick="this.select(0,this.value.length)"/>
+</div>
+<div style="font-size:12px;margin-top:10px;">
+  ダウンロード用画像URL&nbsp;
+  <input value="http://ss.bokete.jp/11141129.jpg" style="width:200px;" onclick="this.select(0,this.value.length)"/>
+</div>
+</div>
+<!-- END boke-entry -->
+
+<!-- BEGIN boke-entry -->
+<div class="boke-entry attention ui-widget" id="boke-entry-11142528">
+
+
+
+<!-- BEGIN scroll buttons -->
+<div class="ui-helper-clearfix" style="width:500px;padding-top:10px;">
+  <a href="javascript:scrollBoke(11142528);">
+    <span class="ui-state-default ui-corner-all icon" style="float:right;margin-right:5px;cursor:pointer;">
+      <span class="ui-icon ui-icon-arrowthickstop-1-s" style="margin:4px;">&nbsp;</span>
+    </span>
+  </a>
+  <a href="javascript:scrollToTop();">
+    <span class="ui-state-default ui-corner-all icon" style="float:right;margin-right:5px;cursor: pointer;">
+      <span class="ui-icon ui-icon-arrowthick-1-n" style="margin:4px;">&nbsp;</span>
+    </span>
+  </a>
+</div>
+<!-- END scroll buttons -->
+
+<br />
+<!-- BEGIN photo odai info -->
+<div class="photo">
+  <a href="/odai/469225">
+    <img src="//d2dcan0armyq93.cloudfront.net/photo/odai/400/821d728817c40141c83f5965592ac27b_400.jpg" alt="" style="width:400;height:400;" />
+  </a>
+  <p>
+  お題 by <a href="/user/sevenfouls">seven</a>
+  photo by
+    <a href="/user/sevenfouls">
+      seven
+    </a>
+
+  </p>
+</div>
+<!-- END photo odai info -->
+
+<p class="boke_read">むちゃぶり</p>
+
+
+<p class="boke-entry-info">
+  【<a href="/boke/category/%E3%83%90%E3%82%AB">バカ</a>】
+  <a href="/boke/11142528">4時間くらい前</a>
+
+
+</p>
+
+
+<div class="boke-entry-rating">
+
+      <form id="rating-form-11142528" class="rating-form" action="/rating" method="post" style="text-align:center;display:inline-block;">
+        <div style="width:80px;margin:5px auto;">
+          <input type="radio" value="1" name="rate-11142528" class="boke-star ui-helper-hidden" title="面白い！"  />
+          <input type="radio" value="2" name="rate-11142528" class="boke-star ui-helper-hidden" title="すごく面白い！！"  />
+          <input type="radio" value="3" name="rate-11142528" class="boke-star ui-helper-hidden" title="ちょーーー面白い！！！"  />
+          <div sytle="clear:both;"></div>
+        </div>
+        <input class="boke-rate" type="hidden" name="rate" />
+        <input class="boke-id" type="hidden" name="boke_id" value="11142528" />
+        <input class="boke-reload" type="hidden" name="reload" value="0" />
+      </form>
+      <p class="rating-message" style="margin:4px;width:100%;display:block;">&nbsp;</p>
+<div class="comment-panel" style="line-height:180%;">
+</div>
+
+<!-- BEGIN accordion -->
+<div class="accordion boke-entry-rating-info">
+<span id="accordion-header-11142528" class="accordion-header">
+  <a href="/boke/11142528#boke-permalink-rating">
+  ★
+  の合計&nbsp;<em>806</em>（373）</a>
+  <a class="rating-link ui-helper-hidden" href="/boke/11142528/rating?type=big">&nbsp;</a>
+</span>
+</div>
+<!-- END accordion -->
+</div>
+
+
+
+<div class="boke-social-bottom">
+<a href="http://twitter.com/share" class="socialite twitter-share" data-lang="ja" data-text="むちゃぶり #ボケて" data-url="http://bokete.jp/boke/11142528" data-count="horizontal" rel="nofollow" target="_blank"></a>&nbsp;
+<a href="http://www.facebook.com/sharer.php?u=http://bokete.jp/boke/11142528" class="socialite facebook-like" data-href="http://bokete.jp/boke/11142528" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" rel="nofollow"></a>
+</div>
+<div style="clear:both;"></div>
+
+<div style="font-size:12px;">
+  Blogで紹介する&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input value="&lt;a href=&quot;http://bokete.jp/boke/11142528&quot;&gt;&lt;img src=&quot;http://ss.bokete.jp/11142528.jpg&quot; title=&quot;むちゃぶり&quot;&gt;&lt;/a&gt;" style="width:380px;" onclick="this.select(0,this.value.length)"/>
+</div>
+<div style="font-size:12px;margin-top:10px;">
+  ダウンロード用画像URL&nbsp;
+  <input value="http://ss.bokete.jp/11142528.jpg" style="width:200px;" onclick="this.select(0,this.value.length)"/>
+</div>
+</div>
+<!-- END boke-entry -->
+
+<!-- BEGIN boke-entry -->
+<div class="boke-entry attention ui-widget" id="boke-entry-11141246">
+
+
+
+<!-- BEGIN scroll buttons -->
+<div class="ui-helper-clearfix" style="width:500px;padding-top:10px;">
+  <a href="javascript:scrollBoke(11141246);">
+    <span class="ui-state-default ui-corner-all icon" style="float:right;margin-right:5px;cursor:pointer;">
+      <span class="ui-icon ui-icon-arrowthickstop-1-s" style="margin:4px;">&nbsp;</span>
+    </span>
+  </a>
+  <a href="javascript:scrollToTop();">
+    <span class="ui-state-default ui-corner-all icon" style="float:right;margin-right:5px;cursor: pointer;">
+      <span class="ui-icon ui-icon-arrowthick-1-n" style="margin:4px;">&nbsp;</span>
+    </span>
+  </a>
+</div>
+<!-- END scroll buttons -->
+
+トゥルーブラッド（True Blood）<br />
+<!-- BEGIN photo odai info -->
+<div class="photo">
+  <a href="/odai/469171">
+    <img src="//d2dcan0armyq93.cloudfront.net/photo/odai/400/678ee319faaac3576d050cad33a20d6d_400.jpg" alt="トゥルーブラッド（True Blood）" style="width:400;height:264;" />
+  </a>
+  <p>
+  お題 by <a href="/user/tekeratta">tekeratta</a>
+  photo by
+    <a href="/user/tekeratta">
+      tekeratta
+    </a>
+
+  </p>
+</div>
+<!-- END photo odai info -->
+
+<p class="boke_read">蚊に刺された</p>
+
+
+<p class="boke-entry-info">
+  【<a href="/boke/category/%E3%83%90%E3%82%AB">バカ</a>】
+  <a href="/boke/11141246">6時間くらい前</a>
+
+
+</p>
+
+
+<div class="boke-entry-rating">
+
+      <form id="rating-form-11141246" class="rating-form" action="/rating" method="post" style="text-align:center;display:inline-block;">
+        <div style="width:80px;margin:5px auto;">
+          <input type="radio" value="1" name="rate-11141246" class="boke-star ui-helper-hidden" title="面白い！"  />
+          <input type="radio" value="2" name="rate-11141246" class="boke-star ui-helper-hidden" title="すごく面白い！！"  />
+          <input type="radio" value="3" name="rate-11141246" class="boke-star ui-helper-hidden" title="ちょーーー面白い！！！"  />
+          <div sytle="clear:both;"></div>
+        </div>
+        <input class="boke-rate" type="hidden" name="rate" />
+        <input class="boke-id" type="hidden" name="boke_id" value="11141246" />
+        <input class="boke-reload" type="hidden" name="reload" value="0" />
+      </form>
+      <p class="rating-message" style="margin:4px;width:100%;display:block;">&nbsp;</p>
+<div class="comment-panel" style="line-height:180%;">
+</div>
+
+<!-- BEGIN accordion -->
+<div class="accordion boke-entry-rating-info">
+<span id="accordion-header-11141246" class="accordion-header">
+  <a href="/boke/11141246#boke-permalink-rating">
+  ★
+  の合計&nbsp;<em>688</em>（327）</a>
+  <a class="rating-link ui-helper-hidden" href="/boke/11141246/rating?type=big">&nbsp;</a>
+</span>
+</div>
+<!-- END accordion -->
+</div>
+
+
+
+<div class="boke-social-bottom">
+<a href="http://twitter.com/share" class="socialite twitter-share" data-lang="ja" data-text="蚊に刺された #ボケて" data-url="http://bokete.jp/boke/11141246" data-count="horizontal" rel="nofollow" target="_blank"></a>&nbsp;
+<a href="http://www.facebook.com/sharer.php?u=http://bokete.jp/boke/11141246" class="socialite facebook-like" data-href="http://bokete.jp/boke/11141246" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" rel="nofollow"></a>
+</div>
+<div style="clear:both;"></div>
+
+<div style="font-size:12px;">
+  Blogで紹介する&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input value="&lt;a href=&quot;http://bokete.jp/boke/11141246&quot;&gt;&lt;img src=&quot;http://ss.bokete.jp/11141246.jpg&quot; title=&quot;蚊に刺された&quot;&gt;&lt;/a&gt;" style="width:380px;" onclick="this.select(0,this.value.length)"/>
+</div>
+<div style="font-size:12px;margin-top:10px;">
+  ダウンロード用画像URL&nbsp;
+  <input value="http://ss.bokete.jp/11141246.jpg" style="width:200px;" onclick="this.select(0,this.value.length)"/>
+</div>
+</div>
+<!-- END boke-entry -->
+
+<!-- BEGIN boke-entry -->
+<div class="boke-entry attention ui-widget" id="boke-entry-11142130">
+
+
+
+<!-- BEGIN scroll buttons -->
+<div class="ui-helper-clearfix" style="width:500px;padding-top:10px;">
+  <a href="javascript:scrollBoke(11142130);">
+    <span class="ui-state-default ui-corner-all icon" style="float:right;margin-right:5px;cursor:pointer;">
+      <span class="ui-icon ui-icon-arrowthickstop-1-s" style="margin:4px;">&nbsp;</span>
+    </span>
+  </a>
+  <a href="javascript:scrollToTop();">
+    <span class="ui-state-default ui-corner-all icon" style="float:right;margin-right:5px;cursor: pointer;">
+      <span class="ui-icon ui-icon-arrowthick-1-n" style="margin:4px;">&nbsp;</span>
+    </span>
+  </a>
+</div>
+<!-- END scroll buttons -->
+
+<br />
+<!-- BEGIN photo odai info -->
+<div class="photo">
+  <a href="/odai/468010">
+    <img src="//d2dcan0armyq93.cloudfront.net/photo/odai/400/de9cc96b40bd0d1c75db3ed5c16ec3e1_400.jpg" alt="" style="width:218;height:400;" />
+  </a>
+  <p>
+  お題 by <a href="/user/Edabashi">E-dabashi</a>
+  photo by
+    <a href="/user/Edabashi">
+      E-dabashi
+    </a>
+
+  </p>
+</div>
+<!-- END photo odai info -->
+
+<p class="boke_read">本日は故人のために参列頂き まじあざっす</p>
+
+
+<p class="boke-entry-info">
+  【<a href="/boke/category/%E3%83%90%E3%82%AB">バカ</a>】
+  <a href="/boke/11142130">5時間くらい前</a>
+
+
+</p>
+
+
+<div class="boke-entry-rating">
+
+      <form id="rating-form-11142130" class="rating-form" action="/rating" method="post" style="text-align:center;display:inline-block;">
+        <div style="width:80px;margin:5px auto;">
+          <input type="radio" value="1" name="rate-11142130" class="boke-star ui-helper-hidden" title="面白い！"  />
+          <input type="radio" value="2" name="rate-11142130" class="boke-star ui-helper-hidden" title="すごく面白い！！"  />
+          <input type="radio" value="3" name="rate-11142130" class="boke-star ui-helper-hidden" title="ちょーーー面白い！！！"  />
+          <div sytle="clear:both;"></div>
+        </div>
+        <input class="boke-rate" type="hidden" name="rate" />
+        <input class="boke-id" type="hidden" name="boke_id" value="11142130" />
+        <input class="boke-reload" type="hidden" name="reload" value="0" />
+      </form>
+      <p class="rating-message" style="margin:4px;width:100%;display:block;">&nbsp;</p>
+<div class="comment-panel" style="line-height:180%;">
+</div>
+
+<!-- BEGIN accordion -->
+<div class="accordion boke-entry-rating-info">
+<span id="accordion-header-11142130" class="accordion-header">
+  <a href="/boke/11142130#boke-permalink-rating">
+  ★
+  の合計&nbsp;<em>672</em>（319）</a>
+  <a class="rating-link ui-helper-hidden" href="/boke/11142130/rating?type=big">&nbsp;</a>
+</span>
+</div>
+<!-- END accordion -->
+</div>
+
+
+
+<div class="boke-social-bottom">
+<a href="http://twitter.com/share" class="socialite twitter-share" data-lang="ja" data-text="本日は故人のために参列頂き まじあざっす #ボケて" data-url="http://bokete.jp/boke/11142130" data-count="horizontal" rel="nofollow" target="_blank"></a>&nbsp;
+<a href="http://www.facebook.com/sharer.php?u=http://bokete.jp/boke/11142130" class="socialite facebook-like" data-href="http://bokete.jp/boke/11142130" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" rel="nofollow"></a>
+</div>
+<div style="clear:both;"></div>
+
+<div style="font-size:12px;">
+  Blogで紹介する&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input value="&lt;a href=&quot;http://bokete.jp/boke/11142130&quot;&gt;&lt;img src=&quot;http://ss.bokete.jp/11142130.jpg&quot; title=&quot;本日は故人のために参列頂き まじあざっす&quot;&gt;&lt;/a&gt;" style="width:380px;" onclick="this.select(0,this.value.length)"/>
+</div>
+<div style="font-size:12px;margin-top:10px;">
+  ダウンロード用画像URL&nbsp;
+  <input value="http://ss.bokete.jp/11142130.jpg" style="width:200px;" onclick="this.select(0,this.value.length)"/>
+</div>
+</div>
+<!-- END boke-entry -->
+
+<!-- BEGIN boke-entry -->
+<div class="boke-entry attention ui-widget" id="boke-entry-11140934">
+
+
+
+<!-- BEGIN scroll buttons -->
+<div class="ui-helper-clearfix" style="width:500px;padding-top:10px;">
+  <a href="javascript:scrollBoke(11140934);">
+    <span class="ui-state-default ui-corner-all icon" style="float:right;margin-right:5px;cursor:pointer;">
+      <span class="ui-icon ui-icon-arrowthickstop-1-s" style="margin:4px;">&nbsp;</span>
+    </span>
+  </a>
+  <a href="javascript:scrollToTop();">
+    <span class="ui-state-default ui-corner-all icon" style="float:right;margin-right:5px;cursor: pointer;">
+      <span class="ui-icon ui-icon-arrowthick-1-n" style="margin:4px;">&nbsp;</span>
+    </span>
+  </a>
+</div>
+<!-- END scroll buttons -->
+
+<br />
+<!-- BEGIN photo odai info -->
+<div class="photo">
+  <a href="/odai/469154">
+    <img src="//d2dcan0armyq93.cloudfront.net/photo/odai/400/db212272b8f21496ccc111681f255468_400.jpg" alt="" style="width:400;height:265;" />
+  </a>
+  <p>
+  お題 by <a href="/user/3745kenji">虹色の瞳</a>
+  photo by
+  <a href="http://www.flickr.com/photos/55658968@N00/">
+    Dakiny
+  </a>
+
+  </p>
+</div>
+<!-- END photo odai info -->
+
+<p class="boke_read">「母さん、お元気ですか。今、　　方向オンチの父さんと旅行に　来ています。おそらくあれが　　　バッキンガム宮殿です」</p>
+
+
+<p class="boke-entry-info">
+  【<a href="/boke/category/%E3%83%90%E3%82%AB">バカ</a>】
+  <a href="/boke/11140934">6時間くらい前</a>
+
+
+</p>
+
+
+<div class="boke-entry-rating">
+
+      <form id="rating-form-11140934" class="rating-form" action="/rating" method="post" style="text-align:center;display:inline-block;">
+        <div style="width:80px;margin:5px auto;">
+          <input type="radio" value="1" name="rate-11140934" class="boke-star ui-helper-hidden" title="面白い！"  />
+          <input type="radio" value="2" name="rate-11140934" class="boke-star ui-helper-hidden" title="すごく面白い！！"  />
+          <input type="radio" value="3" name="rate-11140934" class="boke-star ui-helper-hidden" title="ちょーーー面白い！！！"  />
+          <div sytle="clear:both;"></div>
+        </div>
+        <input class="boke-rate" type="hidden" name="rate" />
+        <input class="boke-id" type="hidden" name="boke_id" value="11140934" />
+        <input class="boke-reload" type="hidden" name="reload" value="0" />
+      </form>
+      <p class="rating-message" style="margin:4px;width:100%;display:block;">&nbsp;</p>
+<div class="comment-panel" style="line-height:180%;">
+</div>
+
+<!-- BEGIN accordion -->
+<div class="accordion boke-entry-rating-info">
+<span id="accordion-header-11140934" class="accordion-header">
+  <a href="/boke/11140934#boke-permalink-rating">
+  ★
+  の合計&nbsp;<em>584</em>（273）</a>
+  <a class="rating-link ui-helper-hidden" href="/boke/11140934/rating?type=big">&nbsp;</a>
+</span>
+</div>
+<!-- END accordion -->
+</div>
+
+
+
+<div class="boke-social-bottom">
+<a href="http://twitter.com/share" class="socialite twitter-share" data-lang="ja" data-text="「母さん、お元気ですか。今、　　方向オンチの父さんと旅行に　来ています。おそらくあれが　　　バッキンガム宮殿です」 #ボケて" data-url="http://bokete.jp/boke/11140934" data-count="horizontal" rel="nofollow" target="_blank"></a>&nbsp;
+<a href="http://www.facebook.com/sharer.php?u=http://bokete.jp/boke/11140934" class="socialite facebook-like" data-href="http://bokete.jp/boke/11140934" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" rel="nofollow"></a>
+</div>
+<div style="clear:both;"></div>
+
+<div style="font-size:12px;">
+  Blogで紹介する&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input value="&lt;a href=&quot;http://bokete.jp/boke/11140934&quot;&gt;&lt;img src=&quot;http://ss.bokete.jp/11140934.jpg&quot; title=&quot;「母さん、お元気ですか。今、　　方向オンチの父さんと旅行に　来ています。おそらくあれが　　　バッキンガム宮殿です」&quot;&gt;&lt;/a&gt;" style="width:380px;" onclick="this.select(0,this.value.length)"/>
+</div>
+<div style="font-size:12px;margin-top:10px;">
+  ダウンロード用画像URL&nbsp;
+  <input value="http://ss.bokete.jp/11140934.jpg" style="width:200px;" onclick="this.select(0,this.value.length)"/>
+</div>
+</div>
+<!-- END boke-entry -->
+
+<!-- BEGIN boke-entry -->
+<div class="boke-entry attention ui-widget" id="boke-entry-11142564">
+
+
+
+<!-- BEGIN scroll buttons -->
+<div class="ui-helper-clearfix" style="width:500px;padding-top:10px;">
+  <a href="javascript:scrollBoke(11142564);">
+    <span class="ui-state-default ui-corner-all icon" style="float:right;margin-right:5px;cursor:pointer;">
+      <span class="ui-icon ui-icon-arrowthickstop-1-s" style="margin:4px;">&nbsp;</span>
+    </span>
+  </a>
+  <a href="javascript:scrollToTop();">
+    <span class="ui-state-default ui-corner-all icon" style="float:right;margin-right:5px;cursor: pointer;">
+      <span class="ui-icon ui-icon-arrowthick-1-n" style="margin:4px;">&nbsp;</span>
+    </span>
+  </a>
+</div>
+<!-- END scroll buttons -->
+
+【前屈立ち】からの動作でボケる<br />
+<!-- BEGIN photo odai info -->
+<div class="photo">
+  <a href="/odai/469226">
+    <img src="//d2dcan0armyq93.cloudfront.net/photo/odai/400/8f2abc0cd5ebc041beb822317363373b_400.jpg" alt="【前屈立ち】からの動作でボケる" style="width:400;height:258;" />
+  </a>
+  <p>
+  お題 by <a href="/user/jarinnko">アラクラン菊崎</a>
+  photo by
+    <a href="/user/jarinnko">
+      アラクラン菊崎
+    </a>
+
+  </p>
+</div>
+<!-- END photo odai info -->
+
+<p class="boke_read">「妊婦さんこの席どうぞ」/「ただのデブかい！」</p>
+
+
+<p class="boke-entry-info">
+  【<a href="/boke/category/%E3%83%90%E3%82%AB">バカ</a>】
+  <a href="/boke/11142564">4時間くらい前</a>
+
+
+</p>
+
+
+<div class="boke-entry-rating">
+
+      <form id="rating-form-11142564" class="rating-form" action="/rating" method="post" style="text-align:center;display:inline-block;">
+        <div style="width:80px;margin:5px auto;">
+          <input type="radio" value="1" name="rate-11142564" class="boke-star ui-helper-hidden" title="面白い！"  />
+          <input type="radio" value="2" name="rate-11142564" class="boke-star ui-helper-hidden" title="すごく面白い！！"  />
+          <input type="radio" value="3" name="rate-11142564" class="boke-star ui-helper-hidden" title="ちょーーー面白い！！！"  />
+          <div sytle="clear:both;"></div>
+        </div>
+        <input class="boke-rate" type="hidden" name="rate" />
+        <input class="boke-id" type="hidden" name="boke_id" value="11142564" />
+        <input class="boke-reload" type="hidden" name="reload" value="0" />
+      </form>
+      <p class="rating-message" style="margin:4px;width:100%;display:block;">&nbsp;</p>
+<div class="comment-panel" style="line-height:180%;">
+</div>
+
+<!-- BEGIN accordion -->
+<div class="accordion boke-entry-rating-info">
+<span id="accordion-header-11142564" class="accordion-header">
+  <a href="/boke/11142564#boke-permalink-rating">
+  ★
+  の合計&nbsp;<em>525</em>（249）</a>
+  <a class="rating-link ui-helper-hidden" href="/boke/11142564/rating?type=big">&nbsp;</a>
+</span>
+</div>
+<!-- END accordion -->
+</div>
+
+
+
+<div class="boke-social-bottom">
+<a href="http://twitter.com/share" class="socialite twitter-share" data-lang="ja" data-text="「妊婦さんこの席どうぞ」/「ただのデブかい！」 #ボケて" data-url="http://bokete.jp/boke/11142564" data-count="horizontal" rel="nofollow" target="_blank"></a>&nbsp;
+<a href="http://www.facebook.com/sharer.php?u=http://bokete.jp/boke/11142564" class="socialite facebook-like" data-href="http://bokete.jp/boke/11142564" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" rel="nofollow"></a>
+</div>
+<div style="clear:both;"></div>
+
+<div style="font-size:12px;">
+  Blogで紹介する&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input value="&lt;a href=&quot;http://bokete.jp/boke/11142564&quot;&gt;&lt;img src=&quot;http://ss.bokete.jp/11142564.jpg&quot; title=&quot;「妊婦さんこの席どうぞ」/「ただのデブかい！」&quot;&gt;&lt;/a&gt;" style="width:380px;" onclick="this.select(0,this.value.length)"/>
+</div>
+<div style="font-size:12px;margin-top:10px;">
+  ダウンロード用画像URL&nbsp;
+  <input value="http://ss.bokete.jp/11142564.jpg" style="width:200px;" onclick="this.select(0,this.value.length)"/>
+</div>
+</div>
+<!-- END boke-entry -->
+
+<!-- BEGIN boke-entry -->
+<div class="boke-entry attention ui-widget" id="boke-entry-11139975">
+
+
+
+<!-- BEGIN scroll buttons -->
+<div class="ui-helper-clearfix" style="width:500px;padding-top:10px;">
+  <a href="javascript:scrollBoke(11139975);">
+    <span class="ui-state-default ui-corner-all icon" style="float:right;margin-right:5px;cursor:pointer;">
+      <span class="ui-icon ui-icon-arrowthickstop-1-s" style="margin:4px;">&nbsp;</span>
+    </span>
+  </a>
+  <a href="javascript:scrollToTop();">
+    <span class="ui-state-default ui-corner-all icon" style="float:right;margin-right:5px;cursor: pointer;">
+      <span class="ui-icon ui-icon-arrowthick-1-n" style="margin:4px;">&nbsp;</span>
+    </span>
+  </a>
+</div>
+<!-- END scroll buttons -->
+
+<br />
+<!-- BEGIN photo odai info -->
+<div class="photo">
+  <a href="/odai/469122">
+    <img src="//d2dcan0armyq93.cloudfront.net/photo/odai/400/c2c0715540b145faa33439632814cce5_400.jpg" alt="" style="width:284;height:400;" />
+  </a>
+  <p>
+  お題 by <a href="/user/kersu">ケース</a>
+  photo by
+    <a href="/user/kersu">
+      ケース
+    </a>
+
+  </p>
+</div>
+<!-- END photo odai info -->
+
+<p class="boke_read">だーれd…</p>
+
+
+<p class="boke-entry-info">
+  【<a href="/boke/category/%E3%83%90%E3%82%AB">バカ</a>】
+  <a href="/boke/11139975">8時間くらい前</a>
+
+
+</p>
+
+
+<div class="boke-entry-rating">
+
+      <form id="rating-form-11139975" class="rating-form" action="/rating" method="post" style="text-align:center;display:inline-block;">
+        <div style="width:80px;margin:5px auto;">
+          <input type="radio" value="1" name="rate-11139975" class="boke-star ui-helper-hidden" title="面白い！"  />
+          <input type="radio" value="2" name="rate-11139975" class="boke-star ui-helper-hidden" title="すごく面白い！！"  />
+          <input type="radio" value="3" name="rate-11139975" class="boke-star ui-helper-hidden" title="ちょーーー面白い！！！"  />
+          <div sytle="clear:both;"></div>
+        </div>
+        <input class="boke-rate" type="hidden" name="rate" />
+        <input class="boke-id" type="hidden" name="boke_id" value="11139975" />
+        <input class="boke-reload" type="hidden" name="reload" value="0" />
+      </form>
+      <p class="rating-message" style="margin:4px;width:100%;display:block;">&nbsp;</p>
+<div class="comment-panel" style="line-height:180%;">
+</div>
+
+<!-- BEGIN accordion -->
+<div class="accordion boke-entry-rating-info">
+<span id="accordion-header-11139975" class="accordion-header">
+  <a href="/boke/11139975#boke-permalink-rating">
+  ★
+  の合計&nbsp;<em>445</em>（211）</a>
+  <a class="rating-link ui-helper-hidden" href="/boke/11139975/rating?type=big">&nbsp;</a>
+</span>
+</div>
+<!-- END accordion -->
+</div>
+
+
+
+<div class="boke-social-bottom">
+<a href="http://twitter.com/share" class="socialite twitter-share" data-lang="ja" data-text="だーれd… #ボケて" data-url="http://bokete.jp/boke/11139975" data-count="horizontal" rel="nofollow" target="_blank"></a>&nbsp;
+<a href="http://www.facebook.com/sharer.php?u=http://bokete.jp/boke/11139975" class="socialite facebook-like" data-href="http://bokete.jp/boke/11139975" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" rel="nofollow"></a>
+</div>
+<div style="clear:both;"></div>
+
+<div style="font-size:12px;">
+  Blogで紹介する&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input value="&lt;a href=&quot;http://bokete.jp/boke/11139975&quot;&gt;&lt;img src=&quot;http://ss.bokete.jp/11139975.jpg&quot; title=&quot;だーれd…&quot;&gt;&lt;/a&gt;" style="width:380px;" onclick="this.select(0,this.value.length)"/>
+</div>
+<div style="font-size:12px;margin-top:10px;">
+  ダウンロード用画像URL&nbsp;
+  <input value="http://ss.bokete.jp/11139975.jpg" style="width:200px;" onclick="this.select(0,this.value.length)"/>
+</div>
+</div>
+<!-- END boke-entry -->
+
+<!-- BEGIN boke-entry -->
+<div class="boke-entry attention ui-widget" id="boke-entry-11142488">
+
+
+
+<!-- BEGIN scroll buttons -->
+<div class="ui-helper-clearfix" style="width:500px;padding-top:10px;">
+  <a href="javascript:scrollBoke(11142488);">
+    <span class="ui-state-default ui-corner-all icon" style="float:right;margin-right:5px;cursor:pointer;">
+      <span class="ui-icon ui-icon-arrowthickstop-1-s" style="margin:4px;">&nbsp;</span>
+    </span>
+  </a>
+  <a href="javascript:scrollToTop();">
+    <span class="ui-state-default ui-corner-all icon" style="float:right;margin-right:5px;cursor: pointer;">
+      <span class="ui-icon ui-icon-arrowthick-1-n" style="margin:4px;">&nbsp;</span>
+    </span>
+  </a>
+</div>
+<!-- END scroll buttons -->
+
+<br />
+<!-- BEGIN photo odai info -->
+<div class="photo">
+  <a href="/odai/457656">
+    <img src="//d2dcan0armyq93.cloudfront.net/photo/odai/400/0006a4b72728e8b13af63e9b6d0ec6c3_400.jpg" alt="" style="width:400;height:264;" />
+  </a>
+  <p>
+  お題 by <a href="/user/kafer">もっふもふ</a>
+  photo by
+    <a href="/user/kafer">
+      もっふもふ
+    </a>
+
+  </p>
+</div>
+<!-- END photo odai info -->
+
+<p class="boke_read">「あの、まだ似顔絵描き終わらないんですか？」</p>
+
+
+<p class="boke-entry-info">
+  【<a href="/boke/category/%E3%83%90%E3%82%AB">バカ</a>】
+  <a href="/boke/11142488">5時間くらい前</a>
+
+
+</p>
+
+
+<div class="boke-entry-rating">
+
+      <form id="rating-form-11142488" class="rating-form" action="/rating" method="post" style="text-align:center;display:inline-block;">
+        <div style="width:80px;margin:5px auto;">
+          <input type="radio" value="1" name="rate-11142488" class="boke-star ui-helper-hidden" title="面白い！"  />
+          <input type="radio" value="2" name="rate-11142488" class="boke-star ui-helper-hidden" title="すごく面白い！！"  />
+          <input type="radio" value="3" name="rate-11142488" class="boke-star ui-helper-hidden" title="ちょーーー面白い！！！"  />
+          <div sytle="clear:both;"></div>
+        </div>
+        <input class="boke-rate" type="hidden" name="rate" />
+        <input class="boke-id" type="hidden" name="boke_id" value="11142488" />
+        <input class="boke-reload" type="hidden" name="reload" value="0" />
+      </form>
+      <p class="rating-message" style="margin:4px;width:100%;display:block;">&nbsp;</p>
+<div class="comment-panel" style="line-height:180%;">
+</div>
+
+<!-- BEGIN accordion -->
+<div class="accordion boke-entry-rating-info">
+<span id="accordion-header-11142488" class="accordion-header">
+  <a href="/boke/11142488#boke-permalink-rating">
+  ★
+  の合計&nbsp;<em>428</em>（203）</a>
+  <a class="rating-link ui-helper-hidden" href="/boke/11142488/rating?type=big">&nbsp;</a>
+</span>
+</div>
+<!-- END accordion -->
+</div>
+
+
+
+<div class="boke-social-bottom">
+<a href="http://twitter.com/share" class="socialite twitter-share" data-lang="ja" data-text="「あの、まだ似顔絵描き終わらないんですか？」 #ボケて" data-url="http://bokete.jp/boke/11142488" data-count="horizontal" rel="nofollow" target="_blank"></a>&nbsp;
+<a href="http://www.facebook.com/sharer.php?u=http://bokete.jp/boke/11142488" class="socialite facebook-like" data-href="http://bokete.jp/boke/11142488" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" rel="nofollow"></a>
+</div>
+<div style="clear:both;"></div>
+
+<div style="font-size:12px;">
+  Blogで紹介する&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input value="&lt;a href=&quot;http://bokete.jp/boke/11142488&quot;&gt;&lt;img src=&quot;http://ss.bokete.jp/11142488.jpg&quot; title=&quot;「あの、まだ似顔絵描き終わらないんですか？」&quot;&gt;&lt;/a&gt;" style="width:380px;" onclick="this.select(0,this.value.length)"/>
+</div>
+<div style="font-size:12px;margin-top:10px;">
+  ダウンロード用画像URL&nbsp;
+  <input value="http://ss.bokete.jp/11142488.jpg" style="width:200px;" onclick="this.select(0,this.value.length)"/>
+</div>
+</div>
+<!-- END boke-entry -->
+
+<!-- BEGIN boke-entry -->
+<div class="boke-entry attention ui-widget" id="boke-entry-11145224">
+
+
+
+<!-- BEGIN scroll buttons -->
+<div class="ui-helper-clearfix" style="width:500px;padding-top:10px;">
+  <a href="javascript:scrollBoke(11145224);">
+    <span class="ui-state-default ui-corner-all icon" style="float:right;margin-right:5px;cursor:pointer;">
+      <span class="ui-icon ui-icon-arrowthickstop-1-s" style="margin:4px;">&nbsp;</span>
+    </span>
+  </a>
+  <a href="javascript:scrollToTop();">
+    <span class="ui-state-default ui-corner-all icon" style="float:right;margin-right:5px;cursor: pointer;">
+      <span class="ui-icon ui-icon-arrowthick-1-n" style="margin:4px;">&nbsp;</span>
+    </span>
+  </a>
+</div>
+<!-- END scroll buttons -->
+
+<br />
+<!-- BEGIN photo odai info -->
+<div class="photo">
+  <a href="/odai/468514">
+    <img src="//d2dcan0armyq93.cloudfront.net/photo/odai/400/05b4edf713b802db59a1416e3838ded1_400.jpg" alt="" style="width:400;height:312;" />
+  </a>
+  <p>
+  お題 by <a href="/user/adora">アドラ</a>
+  photo by
+    <a href="/user/adora">
+      アドラ
+    </a>
+
+  </p>
+</div>
+<!-- END photo odai info -->
+
+<p class="boke_read">ケートの結果、抱き枕にしたいのは絶</p>
+
+
+<p class="boke-entry-info">
+  【<a href="/boke/category/%E3%83%90%E3%82%AB">バカ</a>】
+  <a href="/boke/11145224">2時間くらい前</a>
+
+
+</p>
+
+
+<div class="boke-entry-rating">
+
+      <form id="rating-form-11145224" class="rating-form" action="/rating" method="post" style="text-align:center;display:inline-block;">
+        <div style="width:80px;margin:5px auto;">
+          <input type="radio" value="1" name="rate-11145224" class="boke-star ui-helper-hidden" title="面白い！"  />
+          <input type="radio" value="2" name="rate-11145224" class="boke-star ui-helper-hidden" title="すごく面白い！！"  />
+          <input type="radio" value="3" name="rate-11145224" class="boke-star ui-helper-hidden" title="ちょーーー面白い！！！"  />
+          <div sytle="clear:both;"></div>
+        </div>
+        <input class="boke-rate" type="hidden" name="rate" />
+        <input class="boke-id" type="hidden" name="boke_id" value="11145224" />
+        <input class="boke-reload" type="hidden" name="reload" value="0" />
+      </form>
+      <p class="rating-message" style="margin:4px;width:100%;display:block;">&nbsp;</p>
+<div class="comment-panel" style="line-height:180%;">
+</div>
+
+<!-- BEGIN accordion -->
+<div class="accordion boke-entry-rating-info">
+<span id="accordion-header-11145224" class="accordion-header">
+  <a href="/boke/11145224#boke-permalink-rating">
+  ★
+  の合計&nbsp;<em>407</em>（187）</a>
+  <a class="rating-link ui-helper-hidden" href="/boke/11145224/rating?type=big">&nbsp;</a>
+</span>
+</div>
+<!-- END accordion -->
+</div>
+
+
+
+<div class="boke-social-bottom">
+<a href="http://twitter.com/share" class="socialite twitter-share" data-lang="ja" data-text="ケートの結果、抱き枕にしたいのは絶 #ボケて" data-url="http://bokete.jp/boke/11145224" data-count="horizontal" rel="nofollow" target="_blank"></a>&nbsp;
+<a href="http://www.facebook.com/sharer.php?u=http://bokete.jp/boke/11145224" class="socialite facebook-like" data-href="http://bokete.jp/boke/11145224" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" rel="nofollow"></a>
+</div>
+<div style="clear:both;"></div>
+
+<div style="font-size:12px;">
+  Blogで紹介する&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input value="&lt;a href=&quot;http://bokete.jp/boke/11145224&quot;&gt;&lt;img src=&quot;http://ss.bokete.jp/11145224.jpg&quot; title=&quot;ケートの結果、抱き枕にしたいのは絶&quot;&gt;&lt;/a&gt;" style="width:380px;" onclick="this.select(0,this.value.length)"/>
+</div>
+<div style="font-size:12px;margin-top:10px;">
+  ダウンロード用画像URL&nbsp;
+  <input value="http://ss.bokete.jp/11145224.jpg" style="width:200px;" onclick="this.select(0,this.value.length)"/>
+</div>
+</div>
+<!-- END boke-entry -->
+
+
+<!-- BEGIN pager -->
+<br />
+<div class="clear"></div>
+<div id="pager-plusone">
+
+
+
+    <span class="pager-plusone-current">
+      <em>1</em>
+    </span>
+
+    <span class="pager-plusone-next">
+      <a href="/boke/hot?page=2">
+        次 &raquo;
+      </a>
+    </span>
+</div>
+<!-- END pager -->
+
+
+       </div>
+       <!-- END main_container -->
+
+       <div id="right_container">
+         <div id="right_container_inner">
+           <div id="l_navi" style="margin-top:5px;">
+             <div style="margin:5px 5px 5px 0;">
+               <!--      Fluct ユニット名「ボケて：300×250（GA）」     -->
+<script type="text/javascript">
+//<![CDATA[
+if(typeof(adingoFluct)!="undefined") adingoFluct.showAd('1000008031');
+//]]>
+</script>
+
+             </div>
+             <div style="margin:5px 0 5px;">
+               <a href="http://bit.ly/15eoF2W">
+                 <img src="http://bokete-photo-gamma.s3.amazonaws.com/images/side/banner_a2893fb1532d75d36b5e2bda0f6a8785.jpg" alt="banner" style="max-width:300px;"/>
+               </a>
+             </div>
+             <div style="margin:5px 0 5px;">
+               <a href="http://bit.ly/168r3wi">
+                 <img src="http://bokete-photo-gamma.s3.amazonaws.com/images/side/banner_2080caca7ad59488a2db89f294b6efdf.jpg" alt="banner" style="max-width:300px;"/>
+               </a>
+             </div>
+             <ul>
+               <li class="lnavi01"><a href="/boke/legend" title="殿堂入りボケ">殿堂入りボケ</a></li>
+             </ul>
+           </div>
+           <!--//l_navi-->
+           <div id="fb-like-box">
+<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fbokete.jp&amp;width=300&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=true&amp;appId=188877481185130" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:290px;" allowTransparency="true"></iframe>
+</div>
+
+<dl class="rbox01 mb20">
+<dt><a href="http://bokete-photo.blogspot.com/" title="お知らせブログ"><img src="/common/images/r_cap00.png" alt="お知らせブログより" width="272" height="30" /></a></dt>
+<dd>
+  <table>
+    <tr>
+      <th>9.6&nbsp;</th>
+      <td><a href="http://bokete-photo.blogspot.com/2013/09/blog-post.html">【復旧のお知らせ】ボケ表示の不具合報告</a></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>8.28&nbsp;</th>
+      <td><a href="http://bokete-photo.blogspot.com/2013/08/crno1.html">『CRアタックNo.1でボケて!』開催のおしらせ</a></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>8.13&nbsp;</th>
+      <td><a href="http://bokete-photo.blogspot.com/2013/08/tore.html">日本テレビ「謎解きバトルTORE！」でボケて</a></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>8.1&nbsp;</th>
+      <td><a href="http://bokete-photo.blogspot.com/2013/08/d.html">宇宙兄弟や島耕作でボケる！「D モーニングでボケて」スタートのお知らせ</a></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>7.26&nbsp;</th>
+      <td><a href="http://bokete-photo.blogspot.com/2013/07/de.html">「ドライブ de ボケて!」開催のおしらせ</a></td>
+    </tr>
+  </table>
+</dd>
+</dl>
+
+<dl class="rbox01 mb20">
+<dt><a href="/rating/comment" title="最近のコメント"><img src="/common/images/r_cap03.png" alt="最近のコメント" width="276" height="31" /></a></dt>
+<dd>
+  <table>
+    <tr>
+      <th><img src="//bokete-photo-gamma.s3.amazonaws.com/photo/profile/18/kobora_18.jpg?1371776572" alt="" width="18" height="18" /></th>
+      <td><a href="/boke/11147393">地球って丸いねんぞw</a></td>
+    </tr>
+    <tr>
+      <th><img src="//bokete-photo-gamma.s3.amazonaws.com/photo/profile/18/7300_18.jpg?1377759898" alt="" width="18" height="18" /></th>
+      <td><a href="/boke/11145946">いいえ、こちらこそよろしくです\(//∇//)\いつも楽しませてもらっています♪( ´▽｀)</a></td>
+    </tr>
+    <tr>
+      <th><img src="//d3pb2x7032n52.cloudfront.net/static/images/user_icon.gif" alt="" width="18" height="18" /></th>
+      <td><a href="/boke/11142718">早く動けwwwwwww</a></td>
+    </tr>
+    <tr>
+      <th><img src="//d3pb2x7032n52.cloudfront.net/static/images/user_icon.gif" alt="" width="18" height="18" /></th>
+      <td><a href="/boke/11142488">なんとなくオールド・スネークに見えるのだが</a></td>
+    </tr>
+    <tr>
+      <th><img src="//bokete-photo-gamma.s3.amazonaws.com/photo/profile/18/mugen873_18.jpg?1374115188" alt="" width="18" height="18" /></th>
+      <td><a href="/boke/11148138">ポ（ド）エム</a></td>
+    </tr>
+    <tr>
+      <th><img src="//bokete-photo-gamma.s3.amazonaws.com/photo/profile/18/c4nageru_18.jpg?1377786678" alt="" width="18" height="18" /></th>
+      <td><a href="/boke/11147974">ひっでえwww</a></td>
+    </tr>
+    <tr>
+      <th><img src="//d3pb2x7032n52.cloudfront.net/static/images/user_icon.gif" alt="" width="18" height="18" /></th>
+      <td><a href="/boke/11140046">あっちゃんの奴かww</a></td>
+    </tr>
+    <tr>
+      <th><img src="//bokete-photo-gamma.s3.amazonaws.com/photo/profile/18/7300_18.jpg?1377759898" alt="" width="18" height="18" /></th>
+      <td><a href="/boke/11147632">(T ^ T)</a></td>
+    </tr>
+    <tr>
+      <th><img src="//d3pb2x7032n52.cloudfront.net/static/images/user_icon.gif" alt="" width="18" height="18" /></th>
+      <td><a href="/boke/11141473">ベストアンサー     ころしてしまえ</a></td>
+    </tr>
+    <tr>
+      <th><img src="//bokete-photo-gamma.s3.amazonaws.com/photo/profile/18/sava1971_18.jpg?1377704626" alt="" width="18" height="18" /></th>
+      <td><a href="/boke/11142793">喰う気が失せるよww</a></td>
+    </tr>
+      <tr style="text-align:right;">
+      <th></th>
+      <td><a href="/rating/comment" title="最近のコメント">もっと見る</a></td>
+      </tr>
+  </table>
+</dd>
+</dl>
+
+<dl class="rbox01 mb20">
+<dt><img src="/common/images/r_cap01.png" alt="最近評価されている職人" width="272" height="30" /></dt>
+<dd>
+  <table>
+    <tr>
+      <th><img src="//bokete-photo-gamma.s3.amazonaws.com/photo/profile/18/1219840705_18.jpg?1365143941" alt="" width="18" height="18" /></th>
+      <td><a href="/user/1219840705">
+        センブリ</a></td>
+      </tr>
+    <tr>
+      <th><img src="//bokete-photo-gamma.s3.amazonaws.com/photo/profile/18/19820608_18.jpg?1353290740" alt="" width="18" height="18" /></th>
+      <td><a href="/user/19820608">
+        コメカミの底力</a></td>
+      </tr>
+    <tr>
+      <th><img src="//bokete-photo-gamma.s3.amazonaws.com/photo/profile/18/orekabaki_18.jpg?1378004293" alt="" width="18" height="18" /></th>
+      <td><a href="/user/orekabaki">
+        カバ木</a></td>
+      </tr>
+    <tr>
+      <th><img src="//d3pb2x7032n52.cloudfront.net/static/images/user_icon.gif" alt="" width="18" height="18" /></th>
+      <td><a href="/user/mso7816">
+        ばまお</a></td>
+      </tr>
+    <tr>
+      <th><img src="//bokete-photo-gamma.s3.amazonaws.com/photo/profile/18/pacman22_18.jpg?1372000906" alt="" width="18" height="18" /></th>
+      <td><a href="/user/pacman22">
+        pacman</a></td>
+      </tr>
+    <tr>
+      <th><img src="//bokete-photo-gamma.s3.amazonaws.com/photo/profile/18/akagumi_18.jpg?1354639719" alt="" width="18" height="18" /></th>
+      <td><a href="/user/akagumi">
+        赤組のシャンクス</a></td>
+      </tr>
+    <tr>
+      <th><img src="//bokete-photo-gamma.s3.amazonaws.com/photo/profile/18/sava1971_18.jpg?1377704626" alt="" width="18" height="18" /></th>
+      <td><a href="/user/sava1971">
+        あやまるママ</a></td>
+      </tr>
+    <tr>
+      <th><img src="//bokete-photo-gamma.s3.amazonaws.com/photo/profile/18/4649o4649_18.jpg?1373896014" alt="" width="18" height="18" /></th>
+      <td><a href="/user/4649o4649">
+        くるぶし太郎</a></td>
+      </tr>
+    </table>
+  </dd>
+</dl>
+
+<dl class="rbox01 mb20">
+<dt><img src="/common/images/r_cap02.png" alt="最近お気に入りに追加された職人" width="276" height="31" /></dt>
+<dd>
+  <table>
+    <tr>
+      <th><img src="//bokete-photo-gamma.s3.amazonaws.com/photo/profile/18/hirune2201_18.jpg?1377536279" alt="" width="18" height="18" /></th>
+      <td><a href="/user/hirune2201">ひるね</a></td>
+    </tr>
+    <tr>
+      <th><img src="//bokete-photo-gamma.s3.amazonaws.com/photo/profile/18/hidekazu01_18.jpg?1364297932" alt="" width="18" height="18" /></th>
+      <td><a href="/user/hidekazu01">hide</a></td>
+    </tr>
+    <tr>
+      <th><img src="//bokete-photo-gamma.s3.amazonaws.com/photo/profile/18/tk345rin_18.jpg?1378343909" alt="" width="18" height="18" /></th>
+      <td><a href="/user/tk345rin">TK</a></td>
+    </tr>
+    <tr>
+      <th><img src="//d3pb2x7032n52.cloudfront.net/static/images/user_icon.gif" alt="" width="18" height="18" /></th>
+      <td><a href="/user/killtime">キルタ</a></td>
+    </tr>
+    <tr>
+      <th><img src="//bokete-photo-gamma.s3.amazonaws.com/photo/profile/18/c4nageru_18.jpg?1377786678" alt="" width="18" height="18" /></th>
+      <td><a href="/user/c4nageru">おまえ</a></td>
+    </tr>
+    <tr>
+      <th><img src="//bokete-photo-gamma.s3.amazonaws.com/photo/profile/18/19820608_18.jpg?1353290740" alt="" width="18" height="18" /></th>
+      <td><a href="/user/19820608">コメカミの底力</a></td>
+    </tr>
+    <tr>
+      <th><img src="//d3pb2x7032n52.cloudfront.net/static/images/user_icon.gif" alt="" width="18" height="18" /></th>
+      <td><a href="/user/09110129">カイ</a></td>
+    </tr>
+    <tr>
+      <th><img src="//d3pb2x7032n52.cloudfront.net/static/images/user_icon.gif" alt="" width="18" height="18" /></th>
+      <td><a href="/user/akki002">あっきー</a></td>
+    </tr>
+  </table>
+</dd>
+</dl>
+
+<!-- <dl class="rbox01 mb20"></dl> -->
+
+<div class="adarea">
+  <a href="/about/inquiry" title="お問い合わせ">ボケて利用時のお問い合わせ</a><br />
+  <a href="/about/ad" title="広告掲載">ボケてに広告掲載の問い合わせ</a>
+</div>
+
+         </div>
+         <div style="float: right; width: 200px;">
+
+<div style="margin:20px 0 500px 0;">
+<!--      Fluct ユニット名「bokete：160×600(1)」     -->
+<script type="text/javascript">
+//<![CDATA[
+if(typeof(adingoFluct)!="undefined") adingoFluct.showAd('1000007005');
+//]]>
+</script>
+</div>
+
+<div style="margin:100px 0 500px 0;">
+<!--      Fluct ユニット名「bokete：160×600(2)」     -->
+<script type="text/javascript">
+//<![CDATA[
+if(typeof(adingoFluct)!="undefined") adingoFluct.showAd('1000007006');
+//]]>
+</script>
+</div>
+
+<div style="margin:100px 0 500px 0;">
+
+<!--      Fluct グループ名「bokete：160×600(3)」      -->
+<script type="text/javascript">
+//<![CDATA[
+if(typeof(adingoFluct)!="undefined") adingoFluct.showAd('1000007007');
+//]]>
+</script>
+</div>
+
+<div style="margin:100px 0 100px 0;">
+<script type="text/javascript">
+//<![CDATA[
+if(typeof(adingoFluct)!="undefined") adingoFluct.showAd('1000007681');
+//]]>
+</script>
+</div>
+</div>
+
+
+       </div>
+       <!-- END right_container -->
+
+       <p class="bt_pagetop button-with-icon">
+         <a id="link_to_top" class="ui-state-default ui-corner-all icon" href="#">
+           <span class="ui-icon ui-icon-arrowthick-1-n">&nbsp;</span>
+           ページのTOPへ戻る
+         </a>
+       </p>
+     </div>
+     <!-- END main_base -->
+
+     <div style="clear: both; margin:10px;">
+<center>
+<!--      Fluct ユニット名「bokete：728×90（GA）」     -->
+<script type="text/javascript">
+//<![CDATA[
+if(typeof(adingoFluct)!="undefined") adingoFluct.showAd('1000007001');
+//]]>
+</script>
+</center>
+</div>
+
+
+
+     <div id="footer">
+       <!-- BEGIN site/footer -->
+       <a href="http://omoroki.com">運営会社</a>　<a href="/about/privacy">プライバシーポリシー</a>　<a href="/about/rule">ご利用規約</a>　<a href="/about/help">ヘルプ・よくある質問</a>　<a href="/about/inquiry">お問合わせ</a>　<a href="/about/ad">広告掲載について</a><br />
+       Copyright &copy; 2008-2012 ボケて(bokete) All rights reserved. <a href="http://omoroki.com/" target="_blank">株式会社オモロキ</a>
+       <!-- END site/footer -->
+     </div>
+     <!-- END footer -->
+   </div>
+   <!-- END wrap -->
+
+   <script type="text/javascript">
+     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+   </script>
+   <script type="text/javascript">
+     try {
+     var pageTracker = _gat._getTracker("UA-5620432-2");
+     pageTracker._trackPageview();
+     } catch(err) {}
+   </script>
+ </body>
+</html>

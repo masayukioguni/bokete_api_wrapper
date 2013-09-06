@@ -5,5 +5,8 @@ module BoketeApiWrapper
     def self.popular
       @popular ||= BoketeApiWrapper::Clients::BoketeApi.new
     end
+    def self.hot
+      @hot ||= BoketeApiWrapper::Clients::BoketeApi.new
+    end    
   end
 end
