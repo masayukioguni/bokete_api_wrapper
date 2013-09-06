@@ -5,6 +5,7 @@ require "bokete_api_wrapper/api/legend"
 
 module BoketeApiWrapper
   module Api
+  	 
 
   end
 end

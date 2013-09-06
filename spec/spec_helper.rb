@@ -17,9 +17,6 @@ RSpec.configure do |config|
 
   BoketeApiWrapper.setup do |conf|
     conf.dev = true
-    conf.host  = 'bokete.jp'.freeze
-    conf.endpoint = 'boke'.freeze
-    conf.user_agent =  "BoketeApiWrapper Ruby Gem #{BoketeApiWrapper::VERSION}".freeze
   end
 
   def mock_file(file)
