@@ -23,7 +23,6 @@ module BoketeApiWrapper
         URI.join("#{@scheme}://#{@host}/", path).to_s
       end
 
-
     end
   end
 end

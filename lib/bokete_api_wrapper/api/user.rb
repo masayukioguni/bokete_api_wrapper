@@ -10,7 +10,6 @@ module BoketeApiWrapper
           :page => page
         }
         response = client.get "user/#{username}/boke", params
-        p response
         raise Error, "status code #{response.code}" unless response.code.to_i == 200
         parse_user response
       end
