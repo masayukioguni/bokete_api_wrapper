@@ -9,7 +9,7 @@ module BoketeApiWrapper
         params = {
           :page => page
         }
-        response = client.get 'legend', params
+        response = client.get 'boke/legend', params
         raise Error, "status code #{response.code}" unless response.code.to_i == 200
         parse response
       end

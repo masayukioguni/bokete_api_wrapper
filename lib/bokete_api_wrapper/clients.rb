@@ -11,5 +11,8 @@ module BoketeApiWrapper
     def self.legend
       @legend ||= BoketeApiWrapper::Clients::BoketeApi.new
     end
+    def self.user
+      @user ||= BoketeApiWrapper::Clients::BoketeApi.new
+    end
   end
 end

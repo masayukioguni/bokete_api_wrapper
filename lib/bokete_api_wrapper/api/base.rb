@@ -20,6 +20,18 @@ module BoketeApiWrapper
           a.include?('ss.bokete')
         }.uniq
       end
+
+      def parse_user(response)
+        doc = Nokogiri::HTML(response)
+        doc.xpath('//div//div//p//a').map{|a|
+          a['href']
+        }.reject{|a|
+          a !~ /\/boke\/\d+$/
+        }.map{|a|
+          id = a.gsub("\/boke\/", '')
+          "http://ss.bokete.jp/#{id}"
+        }.uniq
+      end
     end
     class UnknownServiceError < StandardError ; end
   end

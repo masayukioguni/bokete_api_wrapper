@@ -20,8 +20,10 @@ module BoketeApiWrapper
 
       private
       def build_url(path)
-        URI.join("#{@scheme}://#{@host}/#{@endpoint}/", path).to_s
+        URI.join("#{@scheme}://#{@host}/", path).to_s
       end
+
+
     end
   end
 end
