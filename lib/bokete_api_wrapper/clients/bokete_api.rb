@@ -6,7 +6,6 @@ module BoketeApiWrapper
       def initialize
         @scheme = 'http'
         @host = BoketeApiWrapper.configuration.host
-        @endpoint = BoketeApiWrapper.configuration.endpoint
         @ua = BoketeApiWrapper.configuration.user_agent
       end
 

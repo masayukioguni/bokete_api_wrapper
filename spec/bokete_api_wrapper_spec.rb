@@ -5,7 +5,6 @@ describe BoketeApiWrapper do
     # setup is called in spec_helper
     subject { BoketeApiWrapper.configuration }
     its(:host) { should == "bokete.jp"}
-    its(:endpoint) { should == "boke"}
     its(:user_agent) { should == "BoketeApiWrapper Ruby Gem 0.0.1" }
     it { should be_dev }
   end

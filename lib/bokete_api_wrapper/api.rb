@@ -6,7 +6,5 @@ require "bokete_api_wrapper/api/user"
 
 module BoketeApiWrapper
   module Api
-  	 
-
   end
 end

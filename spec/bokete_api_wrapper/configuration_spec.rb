@@ -8,10 +8,6 @@ describe BoketeApiWrapper::Configuration do
       it { expect(configuration.host).to eq("bokete.jp")}
     end
 
-    context :endpoint do
-      it { expect(configuration.endpoint).to eq("boke")}
-    end
-
     context :user_agent do
       it { expect(configuration.user_agent).to eq("BoketeApiWrapper Ruby Gem #{BoketeApiWrapper::VERSION}")}
     end
