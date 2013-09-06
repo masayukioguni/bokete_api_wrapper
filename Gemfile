@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in bokete_api_wrapper.gemspec
 gemspec
 
+gem 'rake'
+gem 'rdoc'
+
 group :development, :test do
   gem 'guard'
   gem 'rspec'
