@@ -2,7 +2,6 @@ $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'rspec'
 require 'bokete_api_wrapper'
-require 'factory_girl'
 require 'webmock/rspec'
 
 RSpec.configure do |config|
@@ -10,10 +9,7 @@ RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
   config.filter_run :focus
   config.order = 'random'
-  config.include FactoryGirl::Syntax::Methods
   config.before { example.example_group.let(:mock_user) { build(:user) } }
-
-  FactoryGirl.find_definitions
 
   BoketeApiWrapper.setup do |conf|
     conf.dev = true

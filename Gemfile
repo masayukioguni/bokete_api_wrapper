@@ -16,7 +16,6 @@ group :development, :test do
   gem 'libnotify', :require => false
   gem 'growl', :require => false
 
-  gem 'factory_girl'
 end
 
 group :test do
