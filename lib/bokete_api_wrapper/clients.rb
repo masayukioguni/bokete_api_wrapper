@@ -7,6 +7,9 @@ module BoketeApiWrapper
     end
     def self.hot
       @hot ||= BoketeApiWrapper::Clients::BoketeApi.new
-    end    
+    end
+    def self.legend
+      @legend ||= BoketeApiWrapper::Clients::BoketeApi.new
+    end
   end
 end
