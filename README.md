@@ -1,4 +1,8 @@
 # BoketeApiWrapper
+# Travis
+[![Build Status](https://travis-ci.org/masayukioguni/bokete_api_wrapper.png?branch=master)](https://travis-ci.org/masayukioguni/bokete_api_wrapper)
+# Coveralls
+[![Coverage Status](https://coveralls.io/repos/masayukioguni/bokete_api_wrapper/badge.png?branch=master)](https://coveralls.io/r/masayukioguni/bokete_api_wrapper?branch=master)
 
 TODO: Write a gem description
 
