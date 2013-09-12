@@ -23,10 +23,12 @@ module BoketeApiWrapper
           node  = Nokogiri::HTML(a)
           href_node = node.xpath('//a')
           img_node = href_node.xpath('//img')
-
-          res = {:boke => img_node[0]['title'],
+          id = href_node[0]['href'].gsub("http://bokete.jp/boke/", '')
+          res = {
+            :id => id,
+            :boke => img_node[0]['title'],
             :img => img_node[0]['src'],
-            :href => href_node[0]['href']
+            :link => href_node[0]['href']
           }
         }.uniq
       end
@@ -41,11 +43,12 @@ module BoketeApiWrapper
           href = "http://bokete.jp/boke/#{id}"
           boke = title_node.text
 
-          res = {:boke => boke,
+          res = {
+            :id => id,
+            :boke => boke,
             :img => img,
-            :href => href
+            :link => href
           }
-          p res
         }
       end
     end
