@@ -1,7 +1,7 @@
 module BoketeApiWrapper
   module Api
     class Popular < Base
-      provider :popular
+      provider :bokete_api
 
       class ApiError < StandardError ; end
 

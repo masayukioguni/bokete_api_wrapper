@@ -1,7 +1,7 @@
 module BoketeApiWrapper
   module Api
     class Legend < Base
-      provider :legend
+      provider :bokete_api
 
       class ApiError < StandardError ; end
 

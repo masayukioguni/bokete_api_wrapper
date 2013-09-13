@@ -1,7 +1,7 @@
 module BoketeApiWrapper
   module Api
     class User < Base
-      provider :user
+      provider :bokete_api
 
       class ApiError < StandardError ; end
 

@@ -1,7 +1,7 @@
 module BoketeApiWrapper
   module Api
     class Hot < Base
-      provider :hot
+      provider :bokete_api
 
       class ApiError < StandardError ; end
 
