@@ -49,7 +49,10 @@ module BoketeApiWrapper
             :img => img,
             :link => href
           }
+        }.reject{|a|
+          a[:id].include?('category')
         }
+
       end
     end
     class UnknownServiceError < StandardError ; end
